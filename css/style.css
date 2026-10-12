@@ -1,0 +1,51 @@
+:root{--acc:#c0674a;--acc-l:#f4e1d8;--ch:#2b2b2e;--bg:#fff;--mut:#5d5d63}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ch);background:var(--bg);padding-bottom:70px}
+img{max-width:100%;display:block}a{color:var(--acc)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}section.wrap{padding:56px 20px}
+h1,h2,h3{line-height:1.2;margin:0 0 .6em}h2{font-size:1.8rem}h2::after{content:"";display:block;width:48px;height:4px;background:var(--acc);margin-top:10px;border-radius:2px}
+.top{position:sticky;top:0;z-index:10;background:var(--ch);color:#fff}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;gap:10px;align-items:center;color:#fff;text-decoration:none;font-weight:700}
+nav{display:none}nav a{color:#eee;text-decoration:none;margin-left:22px;font-size:.95rem}nav a:hover{color:var(--acc-l)}
+.hero{position:relative;padding:0;color:#fff;min-height:540px;display:flex;align-items:flex-end}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,30,32,.2),rgba(30,30,32,.85));z-index:1}
+.hero-inner{position:relative;z-index:2;padding:48px 20px;width:100%}
+.eyebrow{color:var(--acc-l);text-transform:uppercase;letter-spacing:.12em;font-weight:600;margin:0 0 8px;font-size:.85rem}
+h1{font-size:2.2rem}.lead{font-size:1.1rem;max-width:560px}
+.btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+.btn{display:inline-block;padding:13px 22px;border-radius:8px;font-weight:700;text-decoration:none;border:0;font-size:1rem;cursor:pointer}
+.primary{background:var(--acc);color:#fff}.primary:hover{background:#a8553a}
+.wa{background:#25d366;color:#103a22}.free{margin-top:14px;color:#eee;font-size:.95rem}
+.cards{display:grid;gap:16px}
+.cards article{border:1px solid #eadfd9;border-top:4px solid var(--acc);border-radius:10px;padding:20px;background:#fffaf8}
+.cards h3{font-size:1.15rem}.cards p{margin:0;color:var(--mut)}
+.band{background:var(--acc-l)}
+.gallery{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+.gallery figure{margin:0;border-radius:10px;overflow:hidden;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.08)}
+.gallery img{width:100%;height:220px;object-fit:cover}
+.gallery figure:first-child{grid-column:1/-1}.gallery figure:first-child img{height:240px}
+figcaption{padding:8px 12px;font-size:.88rem;color:var(--mut)}
+.about{display:grid;gap:24px}
+.creds{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+.creds li{background:var(--ch);color:#eee;border-radius:10px;padding:14px 18px}.creds strong{display:block;color:var(--acc-l);font-size:1.05rem}
+.areas{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.areas li{background:#fff;border:1px solid #e3c3b5;padding:6px 14px;border-radius:999px}
+.contact{display:grid;gap:28px}
+.links{list-style:none;padding:0}.links li{margin:10px 0}.links a{font-weight:600;text-decoration:none;font-size:1.1rem;word-break:break-all}
+form{display:grid;gap:12px;background:#fffaf8;border:1px solid #eadfd9;padding:20px;border-radius:10px}
+label{display:grid;gap:4px;font-weight:600;font-size:.92rem}
+input,textarea{font:inherit;padding:10px;border:1px solid #cfc2bb;border-radius:6px}
+small{color:var(--mut)}
+footer{background:var(--ch);color:#ccc;padding:24px 0;font-size:.9rem}footer a{color:var(--acc-l)}
+.sticky-call{position:fixed;left:12px;right:12px;bottom:12px;z-index:20;background:var(--acc);color:#fff;text-align:center;padding:14px;border-radius:10px;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+@media(min-width:768px){
+ body{padding-bottom:0}.sticky-call{display:none}nav{display:block}
+ h1{font-size:3rem}.hero{min-height:600px}
+ .cards{grid-template-columns:repeat(4,1fr)}
+ .gallery{grid-template-columns:repeat(4,1fr)}.gallery figure:first-child{grid-column:span 2;grid-row:span 2}
+ .gallery img{height:260px}.gallery figure:first-child img{height:574px}
+ .about,.contact{grid-template-columns:1.2fr 1fr;align-items:start}
+}
